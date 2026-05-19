@@ -1,14 +1,11 @@
-import AppRoutes from "./routes/AppRoutes";
-import { ToastProvider } from "./components/common/ToastProvider";
-import { ErrorBoundary } from "./components/common/ErrorBoundary";
+import './App.css'
 
 function App() {
   return (
-    <ErrorBoundary>
-      <ToastProvider />
-      <AppRoutes />
-    </ErrorBoundary>
-  );
+    <>
+      <h1>AtomQuest Goal Tracker</h1>
+    </>
+  )
 }
 
-export default App;
+export default App
