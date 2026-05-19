@@ -1,6 +1,27 @@
 # AtomQuest Goal Tracker Portal
 
+## 🌐 Live Demo Links
+
+### Frontend
+https://atom-quest-goal-tracker-portal-umgf.vercel.app
+
+### Backend API
+https://atomquestgoaltrackerportal-production.up.railway.app
+
+### GitHub Repository
+https://github.com/Shiva132007/AtomQuest_Goal_tracker_portal
+
+---
+
+# AtomQuest Goal Tracker Portal
+
 Welcome to the **AtomQuest Goal Tracker**, a modern, hackathon-ready employee productivity and goal-tracking platform. It is designed to boost workplace engagement using powerful productivity tools, an AI assistant, and a built-in gamification system.
+
+---
+
+# 🏗 System Architecture
+
+![Architecture Diagram](./architecture-diagram.png)
 
 ---
 
@@ -8,87 +29,102 @@ Welcome to the **AtomQuest Goal Tracker**, a modern, hackathon-ready employee pr
 
 ### Role-Based Access Control (RBAC)
 The application dynamically adjusts its views and permissions based on user roles:
+
 - **Admin**: Full system oversight, audit logs, user management, and platform-wide reporting.
 - **Manager**: Team oversight, tracking team goals, and managing performance reviews.
 - **Employee**: Individual goal tracking, check-ins, and daily task management.
 
+---
+
 ### Productivity & Engagement Tools
-- **Gamification Engine**: Users earn achievements and track progression stats as they complete goals, keeping engagement high.
-- **Pomodoro Timer**: A built-in focus timer (in the Employee Dashboard) to encourage deep work sessions without leaving the platform.
-- **AI Assistant**: Smart goal setting and tracking guidance powered by an integrated AI widget.
-- **Bento Box UI**: A sleek, premium, modern dashboard interface utilizing glassmorphism and subtle Framer Motion animations.
+
+- **Gamification Engine**  
+  Users earn achievements and track progression stats as they complete goals, keeping engagement high.
+
+- **Pomodoro Timer**  
+  A built-in focus timer to encourage deep work sessions without leaving the platform.
+
+- **AI Assistant**  
+  Smart goal setting and productivity guidance powered by an integrated AI widget.
+
+- **Bento Box UI**  
+  Premium modern dashboard interface utilizing glassmorphism and Framer Motion animations.
 
 ---
 
 ## 🛠 Tech Stack
 
-**Frontend:**
-- **React 19** (via Vite)
-- **Tailwind CSS v4** for utility-first styling.
-- **Framer Motion** for smooth UI transitions and micro-animations.
-- **Recharts** for visualizing goal completion and statistics.
-- **React Router v7** for frontend routing and protected routes.
+### Frontend
+- React 19 (Vite)
+- Tailwind CSS v4
+- Framer Motion
+- Recharts
+- React Router v7
 
-**Backend:**
-- **Node.js & Express.js** for handling the REST API.
-- **MongoDB & Mongoose** as the primary NoSQL database and ODM.
-- **JWT (JSON Web Tokens) & bcryptjs** for secure, stateless user authentication and password hashing.
+### Backend
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT Authentication
+- bcryptjs
 
 ---
 
-## 🚀 Installation & Setup Guide (From Scratch)
+## 🚀 Installation & Setup Guide
 
-Follow these steps to get the project running on your local machine from scratch to complete setup.
+### 1. Clone Repository
 
-### 1. Prerequisites
-Ensure you have the following installed:
-- [Node.js](https://nodejs.org/) (v18 or higher recommended)
-- [MongoDB](https://www.mongodb.com/try/download/community) (running locally, or use a MongoDB Atlas cloud URI)
-- Git
-
-### 2. Clone the Repository
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/Shiva132007/AtomQuest_Goal_tracker_portal.git
+
 cd AtomQuest_Goal_tracker_portal
 ```
 
-### 3. Backend Setup
-Navigate to the backend directory, install dependencies, and configure environment variables.
+---
+
+## ⚙ Backend Setup
+
 ```bash
 cd backend
 npm install
 ```
 
-**Create a `.env` file** inside the `backend` folder and add the following:
+Create `.env` file inside backend folder:
+
 ```env
 PORT=5000
-MONGODB_URI=mongodb://localhost:27017/atomquest
-JWT_SECRET=your_super_secret_jwt_key
+MONGODB_URI=your_mongodb_connection
+JWT_SECRET=your_secret_key
 ```
-*Note: Replace `MONGODB_URI` with your Atlas connection string if you are not using a local MongoDB instance.*
 
-**Start the Backend Server:**
+Run backend:
+
 ```bash
-# For development with auto-restart
 npm run dev
-
-# Or for standard start
-npm start
 ```
-The backend should now be running on `http://localhost:5000`.
 
-### 4. Frontend Setup
-Open a new terminal window/tab, navigate to the frontend directory, and install dependencies.
+Backend runs on:
+
+```text
+http://localhost:5000
+```
+
+---
+
+## 💻 Frontend Setup
+
 ```bash
 cd frontend
 npm install
-```
-
-**Start the Frontend Development Server:**
-```bash
 npm run dev
 ```
-Vite will typically start the server on `http://localhost:5173`. Open this URL in your browser to view the application.
+
+Frontend runs on:
+
+```text
+http://localhost:5173
+```
 
 ---
 
@@ -97,28 +133,80 @@ Vite will typically start the server on `http://localhost:5173`. Open this URL i
 ```text
 AtomQuest_Goal_tracker_portal/
 │
-├── backend/                # Node.js + Express Backend
-│   ├── config/             # Database connection setup
-│   ├── controllers/        # Route logic (auth, goals)
-│   ├── middleware/         # Auth & Role verification (JWT)
-│   ├── models/             # Mongoose schemas (User, Goal)
-│   ├── routes/             # API endpoint definitions
-│   └── server.js           # Main entry point for the backend
+├── backend/
+│   ├── config/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   └── server.js
 │
-├── frontend/               # React + Vite Frontend
+├── frontend/
 │   ├── src/
-│   │   ├── Components/     # Reusable UI (Sidebar, Navbar, GoalForm)
-│   │   ├── features/       # Advanced tools (AI, Pomodoro, Gamification)
-│   │   ├── pages/          # Role-based views (Admin, Manager, Employee)
-│   │   ├── hooks/          # Custom state logic (useGoals, useGamification)
-│   │   └── App.jsx         # Root component & Routing
-│   ├── tailwind.config.js  # Styling configuration
-│   └── package.json        # Frontend dependencies
+│   │   ├── components/
+│   │   ├── features/
+│   │   ├── pages/
+│   │   ├── hooks/
+│   │   └── App.jsx
+│   │
+│   ├── package.json
+│   └── vite.config.js
 │
-└── ARCHITECTURE.md         # Full System Architecture Diagram
+├── ARCHITECTURE.md
+└── README.md
 ```
 
 ---
 
+## 🔐 Authentication
+
+The application uses:
+
+- JWT Authentication
+- Password Hashing with bcryptjs
+- Protected Routes
+- Role-based Access Control
+
+---
+
+## 📊 Core Modules
+
+### Employee Dashboard
+- Goal Tracking
+- Daily Progress
+- Pomodoro Timer
+- Achievement Rewards
+
+### Manager Dashboard
+- Team Monitoring
+- Progress Analytics
+- Goal Assignment
+
+### Admin Dashboard
+- User Management
+- System Analytics
+- Audit Logs
+
+---
+
 ## 🧠 Architecture
-For a deep dive into how data flows through the application and the interaction between the frontend, backend, and database, please see the [ARCHITECTURE.md](./ARCHITECTURE.md) file located in the root directory. This file includes interactive Mermaid diagrams that natively render on GitHub.
+
+The system follows a modern MERN architecture:
+
+Frontend → REST API → Express Backend → MongoDB Database
+
+Communication secured using JWT tokens.
+
+---
+
+## 👨‍💻 Author
+
+### Shiva
+GitHub:
+https://github.com/Shiva132007
+
+---
+
+## 📜 License
+
+This project was developed for hackathon and educational purposes.
