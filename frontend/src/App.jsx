@@ -1,6 +1,6 @@
 import AppRoutes from "./routes/AppRoutes";
-import { ToastProvider } from "./components/common/ToastProvider";
-import { ErrorBoundary } from "./components/common/ErrorBoundary";
+import { ToastProvider } from "./Components/common/ToastProvider";
+import { ErrorBoundary } from "./Components/common/ErrorBoundary";
 
 function App() {
   return (
