@@ -5,9 +5,9 @@ import {
 
 } from "react";
 
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../Components/Sidebar";
 
-import Navbar from "../components/Navbar";
+import Navbar from "../Components/Navbar";
 
 function DashboardLayout({ children }) {
 

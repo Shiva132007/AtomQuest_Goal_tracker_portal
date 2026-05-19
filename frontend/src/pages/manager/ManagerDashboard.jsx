@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle, XCircle, Clock, Users, Activity, Target } from "lucide-react";
-import { DashboardLayout } from "../../components/layout/DashboardLayout";
-import { Card, CardContent, CardHeader } from "../../components/ui/Card";
-import { Badge } from "../../components/ui/Badge";
-import { ProgressBar } from "../../components/ui/Progress";
-import { Button } from "../../components/ui/Button";
+import { DashboardLayout } from "../../Components/layout/DashboardLayout";
+import { Card, CardContent, CardHeader } from "../../Components/ui/Card";
+import { Badge } from "../../Components/ui/Badge";
+import { ProgressBar } from "../../Components/ui/Progress";
+import { Button } from "../../Components/ui/Button";
 import API from "../../services/api";
 import toast from "react-hot-toast";
 

@@ -4,7 +4,7 @@ import {
   Route,
 } from "react-router-dom";
 import { Suspense, lazy } from "react";
-import { LoadingFallback } from "../components/common/LoadingFallback";
+import { LoadingFallback } from "../Components/common/LoadingFallback";
 
 const Login = lazy(() => import("../pages/auth/Login"));
 const Register = lazy(() => import("../pages/auth/Register"));
@@ -16,7 +16,7 @@ const AdminDashboard = lazy(() => import("../pages/admin/AdminDashboard"));
 const Users = lazy(() => import("../pages/admin/Users"));
 const Reports = lazy(() => import("../pages/admin/Reports"));
 const AuditLogs = lazy(() => import("../pages/admin/AuditLogs"));
-import ProtectedRoute from "../components/ProtectedRoute";
+import ProtectedRoute from "../Components/ProtectedRoute";
 
 function AppRoutes() {
   return (

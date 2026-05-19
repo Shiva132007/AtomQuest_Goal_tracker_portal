@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ClipboardCheck, Target, TrendingUp, Save } from "lucide-react";
 
-import { DashboardLayout } from "../../components/layout/DashboardLayout";
-import { Card, CardContent } from "../../components/ui/Card";
-import { Badge } from "../../components/ui/Badge";
-import { ProgressBar } from "../../components/ui/Progress";
-import { Input, Textarea } from "../../components/ui/Input";
-import { Button } from "../../components/ui/Button";
+import { DashboardLayout } from "../../Components/layout/DashboardLayout";
+import { Card, CardContent } from "../../Components/ui/Card";
+import { Badge } from "../../Components/ui/Badge";
+import { ProgressBar } from "../../Components/ui/Progress";
+import { Input, Textarea } from "../../Components/ui/Input";
+import { Button } from "../../Components/ui/Button";
 import toast from "react-hot-toast";
 
 function Checkins() {

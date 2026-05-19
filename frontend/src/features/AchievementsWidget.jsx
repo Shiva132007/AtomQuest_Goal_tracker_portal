@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { Card, CardContent } from "../components/ui/Card";
-import { Badge } from "../components/ui/Badge";
+import { Card, CardContent } from "../Components/ui/Card";
+import { Badge } from "../Components/ui/Badge";
 import { getAchievements } from "./productivityUtils";
 
 /**
