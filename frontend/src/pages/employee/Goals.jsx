@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Plus, Trash2, Edit2, TrendingUp } from "lucide-react";
-import { DashboardLayout } from "../../components/layout/DashboardLayout";
-import { Card, CardContent, CardHeader } from "../../components/ui/Card";
-import { Button } from "../../components/ui/Button";
-import { Input } from "../../components/ui/Input";
-import { Badge } from "../../components/ui/Badge";
-import { ProgressBar } from "../../components/ui/Progress";
+import { DashboardLayout } from "../../Components/layout/DashboardLayout";
+import { Card, CardContent, CardHeader } from "../../Components/ui/Card";
+import { Button } from "../../Components/ui/Button";
+import { Input } from "../../Components/ui/Input";
+import { Badge } from "../../Components/ui/Badge";
+import { ProgressBar } from "../../Components/ui/Progress";
 import { useGoals } from "../../hooks/useGoals";
 import API from "../../services/api";
 import toast from "react-hot-toast";
