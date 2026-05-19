@@ -1,10 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-
-  baseURL:
-    "https://atomquestgoaltrackerportal-production.up.railway.app",
-
+  baseURL: "https://atomquestgoaltrackerportal-production.up.railway.app/api",
 });
 
 export default API;
