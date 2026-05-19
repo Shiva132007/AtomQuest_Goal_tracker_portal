@@ -13,7 +13,12 @@ export function ProgressBar({
   showLabel = true,
   className = "",
 }) {
-  const percentage = Math.min(100, (value / max) * 100);
+  const numericValue = Number(value) || 0;
+  const numericMax = Number(max) || 100;
+  const percentage = Math.min(
+    100,
+    Math.max(0, (numericValue / numericMax) * 100)
+  );
 
   const sizeClasses = {
     sm: "h-1.5",
@@ -22,10 +27,10 @@ export function ProgressBar({
   };
 
   const colorGradients = {
-    primary: "from-primary-400 to-primary-600",
-    success: "from-success-400 to-success-600",
-    warning: "from-warning-400 to-warning-600",
-    danger: "from-danger-400 to-danger-600",
+    primary: "linear-gradient(90deg, #38bdf8 0%, #0284c7 100%)",
+    success: "linear-gradient(90deg, #4ade80 0%, #16a34a 100%)",
+    warning: "linear-gradient(90deg, #fbbf24 0%, #d97706 100%)",
+    danger: "linear-gradient(90deg, #f87171 0%, #dc2626 100%)",
   };
 
   return (
@@ -43,16 +48,16 @@ export function ProgressBar({
             duration: animated ? 0.8 : 0,
             ease: "easeOut",
           }}
-          className={cn(
-            "h-full rounded-full bg-gradient-to-r",
-            colorGradients[color]
-          )}
+          className="h-full rounded-full"
+          style={{
+            background: colorGradients[color] || colorGradients.primary,
+          }}
         />
       </div>
       {showLabel && (
         <div className="flex justify-between items-center mt-2">
           <span className="text-xs text-neutral-600 dark:text-neutral-400">
-            {value} / {max}
+            {numericValue} / {numericMax}
           </span>
           <span className="text-xs font-semibold text-neutral-700 dark:text-neutral-300">
             {Math.round(percentage)}%
